@@ -1,4 +1,4 @@
-import { Box, Input, Button, Table, Thead, Tbody, Tr, Th, Td, useToast } from '@chakra-ui/react';
+import { Box, Input, Button, Table, Thead, Tbody, Tr, Th, Td, useToast, Image } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { client } from 'lib/crud';
 
@@ -36,6 +36,7 @@ const Index = () => {
 
   return (
     <Box p={8}>
+      <Image src="/images/bearded-man.jpg" alt="Bearded Handsome Man" boxSize="300px" m="auto" mt={5} mb={5} borderRadius="lg" />
       <Box mt={10}>
         <Input placeholder="Enter a new blog post idea" value={newIdea} onChange={(e) => setNewIdea(e.target.value)} />
         <Button onClick={addIdea} mt={2}>Add Idea</Button>
